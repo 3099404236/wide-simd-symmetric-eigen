@@ -67,7 +67,7 @@ wide-simd-symmetric-eigen/
 │   └── simd_machine.hpp                   # SIMD machine API definition (192KB SPAD)
 ├── kernel/
 │   ├── matrix_symmetric_eigen.cpp         # Clean kernel implementation
-│   ├── matrix_symmetric_eigen_layout.h    # Layout/Tiling configuration struct
+│   ├── matrix_symmetric_eigen_layout.h    # Workload layout configuration struct
 │   └── layout_key_matrix_symmetric_eigen.h# Template argument selector
 ├── host/
 │   └── matrix_symmetric_eigen.cpp         # Host layout & workspace calculation

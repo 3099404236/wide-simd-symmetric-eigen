@@ -1,4 +1,4 @@
-// Host侧Tiling实现 —— MatrixSymmetricEigen
+// Host-side Layout Configuration - MatrixSymmetricEigen
 #include "interface/operator_registry.hpp"
 #include "interface/platform_hardware.hpp"
 
@@ -38,10 +38,10 @@ namespace kernel_layout {
         uint32_t DT_A = static_cast<uint32_t>(dtype_A);
         SIMD_TPL_SELECT_PARAM(context, DT_A);
 
-        MatrixSymmetricEigenLayoutData *tiling = context->GetLayoutConfig<MatrixSymmetricEigenLayoutData>();
-        tiling->n = n;
-        tiling->batch_size = batch_size;
-        tiling->is_upper = is_upper;
+        MatrixSymmetricEigenLayoutData *layout_cfg = context->GetLayoutConfig<MatrixSymmetricEigenLayoutData>();
+        layout_cfg->n = n;
+        layout_cfg->batch_size = batch_size;
+        layout_cfg->is_upper = is_upper;
 
         context->SetParallelUnits(num_simd_cores);
 

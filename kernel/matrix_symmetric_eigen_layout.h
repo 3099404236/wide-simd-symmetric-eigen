@@ -1,4 +1,4 @@
-// Tiling结构体定义的头文件
+// Workload layout configuration struct
 #pragma once
 
 #include <cstdint>
